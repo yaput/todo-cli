@@ -9,7 +9,7 @@ import (
 
 func main() {
 	token := os.Getenv("JIRA_TOKEN")
-	jclient := storage_api.NewJiraClient("https://29022131.atlassian.net", "antonius.putra@traveloka.com", token, 20812)
+	jclient := storage_api.NewJiraClient("https://29022131.atlassian.net", "antonius.putra@traveloka.com", token, "847")
 	todoList := interface_api.NewInterface(*storage_api.NewStorage(*jclient))
 
 	todoList.StartTodoList()
